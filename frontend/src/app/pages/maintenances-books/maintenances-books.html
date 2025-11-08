@@ -1,0 +1,102 @@
+<div class="container mt-4">
+  <h2 class="mb-3">Mantenimiento de Libros</h2>
+
+  <button class="btn btn-success mb-3" (click)="openModal()">
+    <i class="bi bi-plus-circle"></i> Agregar Libro
+  </button>
+
+  <table class="table table-bordered table-hover text-center align-middle">
+    <thead class="table-dark">
+      <tr>
+        <th>ID Libro</th>
+        <th>Imagen</th>
+        <th>Título</th>
+        <th>Autor</th>
+        <th>Año</th>
+        <th>Categoría</th>
+        <th>Estado</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let book of books">
+        <td>{{ book.id }}</td>
+        <td>
+          <img [src]="book.image" alt="Imagen libro" width="50" height="70" class="rounded shadow-sm">
+        </td>
+        <td>{{ book.title }}</td>
+        <td>{{ book.author }}</td>
+        <td>{{ book.year }}</td>
+        <td>{{ book.category }}</td>
+        <td>
+          <span [class]="'badge ' + (book.state === 'available' ? 'bg-success' : 'bg-danger')">
+            {{ book.state === 'available' ? 'Disponible' : 'Prestado' }}
+          </span>
+        </td>
+        <td>
+          <i class="bi bi-pencil-square text-primary me-3" role="button" (click)="openModal(book)"></i>
+          <i class="bi bi-trash text-danger" role="button" (click)="deleteBook(book)"></i>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="modal-backdrop fade show" *ngIf="modalOpen"></div>
+<div class="modal fade show d-block" tabindex="-1" *ngIf="modalOpen">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">{{ isEditMode ? 'Editar Libro' : 'Agregar Libro' }}</h5>
+        <button type="button" class="btn-close" (click)="closeModal()"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label class="form-label">ID Libro</label>
+            <input class="form-control" [(ngModel)]="selectedBook!.id" name="id">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Título</label>
+            <input class="form-control" [(ngModel)]="selectedBook!.title" name="title">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Autor</label>
+            <input class="form-control" [(ngModel)]="selectedBook!.author" name="author">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Año</label>
+            <input type="number" class="form-control" [(ngModel)]="selectedBook!.year" name="year">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Descripción</label>
+            <textarea class="form-control" [(ngModel)]="selectedBook!.description" name="description"></textarea>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Imagen (URL)</label>
+            <input class="form-control" [(ngModel)]="selectedBook!.image" name="image">
+            <div *ngIf="selectedBook!.image" class="mt-2">
+              <img [src]="selectedBook!.image" width="100" class="rounded shadow-sm">
+            </div>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Categoría</label>
+            <input class="form-control" [(ngModel)]="selectedBook!.category" name="category">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Estado</label>
+            <select class="form-select" [(ngModel)]="selectedBook!.state" name="state">
+              <option value="available">Disponible</option>
+              <option value="loaned">Prestado</option>
+            </select>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" (click)="closeModal()">Cancelar</button>
+        <button class="btn btn-primary" (click)="saveBook()">
+          {{ isEditMode ? 'Actualizar' : 'Guardar' }}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
