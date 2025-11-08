@@ -1,0 +1,73 @@
+<div class="login-container d-flex justify-content-center align-items-center vh-100">
+  <div class="login-card p-4">
+    <h3 class="text-center mb-4">Registro</h3>
+
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+
+      <div class="mb-3">
+        <label for="name" class="form-label">Nombre completo</label>
+        <input type="text" id="name" class="form-control" formControlName="name" placeholder="Ingresa tu nombre">
+        @if (registerForm.get('name')?.touched && registerForm.get('name')?.invalid) {
+          <div class="text-white large">El nombre es obligatorio</div>
+        }
+      </div>
+
+      <div class="mb-3">
+        <label for="documentNumber" class="form-label">Número de documento</label>
+        <input type="text" id="documentNumber" class="form-control" formControlName="documentNumber" placeholder="Ingresa tu número de documento">
+        @if (registerForm.get('documentNumber')?.touched && registerForm.get('documentNumber')?.invalid) {
+          <div class="text-white large">El número de documento es obligatorio</div>
+        }
+      </div>
+
+      <div class="mb-3">
+        <label for="documentType" class="form-label">Tipo de documento</label>
+        <select id="documentType" class="form-select" formControlName="documentType">
+          <option value="CC">CC</option>
+          <option value="TI">TI</option>
+          <option value="Pasaporte">Pasaporte</option>
+        </select>
+        @if (registerForm.get('documentType')?.touched && registerForm.get('documentType')?.invalid) {
+          <div class="text-white large">El tipo de documento es obligatorio</div>
+        }
+      </div>
+
+      <div class="mb-3">
+        <label for="email" class="form-label">Correo electrónico</label>
+        <input type="email" id="email" class="form-control" formControlName="email" placeholder="Ingresa tu correo">
+        @if (registerForm.get('email')?.touched && registerForm.get('email')?.invalid) {
+          <div class="text-white large">Correo inválido</div>
+        }
+      </div>
+
+      <div class="mb-3">
+        <label for="password" class="form-label">Contraseña</label>
+        <input type="password" id="password" class="form-control" formControlName="password" placeholder="Ingresa tu contraseña">
+        @if (registerForm.get('password')?.touched && registerForm.get('password')?.invalid) {
+          <div class="text-white large">La contraseña es obligatoria</div>
+        }
+      </div>
+      <div class="mb-3">
+        <label for="passwordConfirmed" class="form-label">Confirmar Contraseña</label>
+        <input type="password" id="passwordConfirmed" class="form-control" formControlName="passwordConfirmed" placeholder="confirma tu contraseña">
+        @if (registerForm.get('passwordConfirmed')?.touched && registerForm.get('passwordConfirmed')?.invalid) {
+          <div class="text-white large">Confirmar contraseña es obligatorio</div>
+        }
+      </div>
+
+      <div class="mb-3">
+        <label for="rol" class="form-label">Rol</label>
+        <select id="rol" class="form-select" formControlName="rol">
+          <option value="admin">Admin</option>
+          <option value="user">User</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn btn-primary w-100">Registrarme</button>
+    </form>
+
+    <div class="text-center mt-3">
+      <a routerLink="/login" class="text-light">¿Ya tienes cuenta? Inicia sesión</a>
+    </div>
+  </div>
+</div>
