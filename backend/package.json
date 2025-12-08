@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
     "name": "backend",
     "version": "1.0.0",
@@ -27,3 +28,29 @@
         "nodemon": "^3.1.10"
     }
 }
+=======
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./view/app.js",
+    "start:dev": "nodemon ./view/app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.0",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.16.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
+>>>>>>> 5b11dd5d843f9a73886d4c7a19de23132de61151

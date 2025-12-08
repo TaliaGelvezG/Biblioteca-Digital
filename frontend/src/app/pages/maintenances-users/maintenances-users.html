@@ -1,0 +1,80 @@
+<div class="container mt-4">
+  <h2 class="mb-4">Mantenimiento de Usuarios</h2>
+
+  <table class="table table-hover">
+    <thead class="table-dark">
+      <tr>
+        <th>Nombre</th>
+        <th>Documento</th>
+        <th>Tipo</th>
+        <th>Email</th>
+        <th>Rol</th>
+        <th class="text-center">Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users; let i = index">
+        <td>{{ user.name }}</td>
+        <td>{{ user.documentNumber }}</td>
+        <td>{{ user.documentType }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.rol }}</td>
+        <td class="text-center">
+
+          <i class="bi bi-pencil-square text-primary me-3"
+             role="button"
+             (click)="openEditModal(user, i)"></i>
+          <i class="bi bi-trash text-danger"
+             role="button"
+             (click)="deleteUser(i, user.id)"></i>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="modal fade" id="editUserModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Editar Usuario</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="row mb-3">
+            <div class="col">
+              <input type="text" class="form-control" [(ngModel)]="selectedUser.name" name="name" placeholder="Nombre">
+            </div>
+            <div class="col">
+              <input type="text" class="form-control" [(ngModel)]="selectedUser.documentNumber" name="documentNumber" placeholder="Documento">
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col">
+              <input type="text" class="form-control" [(ngModel)]="selectedUser.documentType" name="documentType" placeholder="Tipo Doc">
+            </div>
+            <div class="col">
+              <input type="email" class="form-control" [(ngModel)]="selectedUser.email" name="email" placeholder="Email">
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col">
+              <input type="password" class="form-control" [(ngModel)]="selectedUser.password" name="password" placeholder="Contraseña">
+            </div>
+            <div class="col">
+              <select class="form-select" [(ngModel)]="selectedUser.rol" name="rol">
+                <option value="admin">Admin</option>
+                <option value="user">User</option>
+              </select>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <button class="btn btn-primary" (click)="saveUser()">Guardar</button>
+      </div>
+    </div>
+  </div>
+</div>

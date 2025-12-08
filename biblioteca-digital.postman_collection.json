@@ -1,0 +1,573 @@
+{
+	"info": {
+		"_postman_id": "4af94daf-0298-403e-9b28-c0adfe6f3989",
+		"name": "biblioteca-digital",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18239688"
+	},
+	"item": [
+		{
+			"name": "Health",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/v1/biblioteca-digital/health",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"biblioteca-digital",
+						"health"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List all Users",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IndhcnRvemNAZ21haWwuY29tIiwicm9sIjoiYWRtaW4iLCJ1c2VyTmFtZSI6IldhbHRoZXIgWmFwYXRhIiwiaWF0IjoxNzU1NjM2ODExLCJleHAiOjE3NTU2NDA0MTF9.LLAccP1Z063LHiyVELMcV6AkwB9lRjyaBnAkrACJnV4",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/api/v1/biblioteca-digital/users",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"biblioteca-digital",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List all Books",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IndhcnRvemNAZ21haWwuY29tIiwiaWF0IjoxNzU1MTM3NjIwLCJleHAiOjE3NTUxNDEyMjB9.MJa-Co82NXWLpXbD6Z7sXunHePiTF2WaIskCVeT43Uc",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/api/v1/biblioteca-digital/books",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"biblioteca-digital",
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List all Loans",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IndhcnRvemNAZ21haWwuY29tIiwicm9sIjoiYWRtaW4iLCJ1c2VyTmFtZSI6IldhbHRoZXIgWmFwYXRhIENhc2FzIiwiaWF0IjoxNzU1NjYwODkwLCJleHAiOjE3NTU2NjQ0OTB9.UH1VJuYfwM-x1G30zrGVONHFKLJxqHTErXtFwobOwU0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/api/v1/biblioteca-digital/loans",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"biblioteca-digital",
+						"loans"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List User by Id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IndhcnRvemNAZ21haWwuY29tIiwiaWF0IjoxNzU1MTM3NjIwLCJleHAiOjE3NTUxNDEyMjB9.MJa-Co82NXWLpXbD6Z7sXunHePiTF2WaIskCVeT43Uc",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/api/v1/biblioteca-digital/users/689cb4eceea506f5e93855b3",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"biblioteca-digital",
+						"users",
+						"689cb4eceea506f5e93855b3"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Book by Id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IndhcnRvemNAZ21haWwuY29tIiwiaWF0IjoxNzU1MTM3NjIwLCJleHAiOjE3NTUxNDEyMjB9.MJa-Co82NXWLpXbD6Z7sXunHePiTF2WaIskCVeT43Uc",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/api/v1/biblioteca-digital/books/689bd3e3500ae019f43450ef",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"biblioteca-digital",
+						"books",
+						"689bd3e3500ae019f43450ef"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Loan by Id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IndhcnRvemNAZ21haWwuY29tIiwiaWF0IjoxNzU1MTM3NjIwLCJleHAiOjE3NTUxNDEyMjB9.MJa-Co82NXWLpXbD6Z7sXunHePiTF2WaIskCVeT43Uc",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/api/v1/biblioteca-digital/loans/689bd3e3500ae019f43450ef",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"biblioteca-digital",
+						"loans",
+						"689bd3e3500ae019f43450ef"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update User",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IndhcnRvemNAZ21haWwuY29tIiwiaWF0IjoxNzU1MTM3NjIwLCJleHAiOjE3NTUxNDEyMjB9.MJa-Co82NXWLpXbD6Z7sXunHePiTF2WaIskCVeT43Uc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Usuario actualizado\",\n    \"documentNumber\": \"5555555555\",\n    \"documentType\": \"CC\",\n    \"email\": \"email@test.com\",\n    \"password\": \"contraseñaTest\",\n    \"rol\": \"user\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/v1/biblioteca-digital/users/689bd3e3500ae019f43450ef",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"biblioteca-digital",
+						"users",
+						"689bd3e3500ae019f43450ef"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Book",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IndhcnRvemNAZ21haWwuY29tIiwiaWF0IjoxNzU1MTM3NjIwLCJleHAiOjE3NTUxNDEyMjB9.MJa-Co82NXWLpXbD6Z7sXunHePiTF2WaIskCVeT43Uc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"El señor de los anillos actualizado\",\n    \"author\": \"Cualquier persona\",\n    \"year\": 1994,\n    \"description\": \"Descripción para el libro del señor de los anillos\",\n    \"image\": \"Url de la imagen\",\n    \"category\": \"Ficción\",\n    \"state\": \"available\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/v1/biblioteca-digital/books/689cc189121284df39a8318e",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"biblioteca-digital",
+						"books",
+						"689cc189121284df39a8318e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Loan",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IndhcnRvemNAZ21haWwuY29tIiwiaWF0IjoxNzU1MTM3NjIwLCJleHAiOjE3NTUxNDEyMjB9.MJa-Co82NXWLpXbD6Z7sXunHePiTF2WaIskCVeT43Uc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"bookId\":\"689d4ab983bd7506198a3fff\",\n    \"documentNumberUser\":\"1039886502\",\n    \"bookName\":\"El señor de los anillos actualizado\",\n    \"UserName\":\"Walther Zapata\",\n    \"loanDate\":\"13/08/2025\",\n    \"loanTime\": 60\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/v1/biblioteca-digital/loans/689d503ad1d30f2d80bd0ab6",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"biblioteca-digital",
+						"loans",
+						"689d503ad1d30f2d80bd0ab6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IndhcnRvemNAZ21haWwuY29tIiwiaWF0IjoxNzU1MTM3NjIwLCJleHAiOjE3NTUxNDEyMjB9.MJa-Co82NXWLpXbD6Z7sXunHePiTF2WaIskCVeT43Uc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/v1/biblioteca-digital/users/689cb5b7d3fac66c35370473",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"biblioteca-digital",
+						"users",
+						"689cb5b7d3fac66c35370473"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Book",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IndhcnRvemNAZ21haWwuY29tIiwiaWF0IjoxNzU1MTM3NjIwLCJleHAiOjE3NTUxNDEyMjB9.MJa-Co82NXWLpXbD6Z7sXunHePiTF2WaIskCVeT43Uc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/v1/biblioteca-digital/books/689bd3e3500ae019f43450ef",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"biblioteca-digital",
+						"books",
+						"689bd3e3500ae019f43450ef"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Book Copy",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IndhcnRvemNAZ21haWwuY29tIiwiaWF0IjoxNzU1MTM3NjIwLCJleHAiOjE3NTUxNDEyMjB9.MJa-Co82NXWLpXbD6Z7sXunHePiTF2WaIskCVeT43Uc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/v1/biblioteca-digital/loans/689bd3e3500ae019f43450ef",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"biblioteca-digital",
+						"loans",
+						"689bd3e3500ae019f43450ef"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Walther Clone mas\",\n    \"documentNumber\": \"436\",\n    \"documentType\": \"CC\",\n    \"email\": \"test-mas@gmail.com\",\n    \"password\": \"test\",\n    \"passwordConfirmed\": \"testfadsfads\",\n    \"rol\": \"admin\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/v1/biblioteca-digital/users/register",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"biblioteca-digital",
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IndhcnRvemNAZ21haWwuY29tIiwiaWF0IjoxNzU1MTM3NjIwLCJleHAiOjE3NTUxNDEyMjB9.MJa-Co82NXWLpXbD6Z7sXunHePiTF2WaIskCVeT43Uc",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"wartozc@gmail.com\",\n    \"password\": \"walterzc1994\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/v1/biblioteca-digital/users/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"biblioteca-digital",
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Book",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IndhcnRvemNAZ21haWwuY29tIiwiaWF0IjoxNzU1MTM3NjIwLCJleHAiOjE3NTUxNDEyMjB9.MJa-Co82NXWLpXbD6Z7sXunHePiTF2WaIskCVeT43Uc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"El señor de los anillos\",\n    \"author\": \"Cualquier persona\",\n    \"year\": 1994,\n    \"description\": \"Descripción para el libro del señor de los anillos\",\n    \"image\": \"Url de la imagen\",\n    \"category\": \"Ficción\",\n    \"state\": \"available\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/v1/biblioteca-digital/books",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"biblioteca-digital",
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Loan",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IndhcnRvemNAZ21haWwuY29tIiwicm9sIjoiYWRtaW4iLCJ1c2VyTmFtZSI6IldhbHRoZXIgWmFwYXRhIENhc2FzIiwiaWF0IjoxNzU1NjYwODkwLCJleHAiOjE3NTU2NjQ0OTB9.UH1VJuYfwM-x1G30zrGVONHFKLJxqHTErXtFwobOwU0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"bookId\":\"689d4ab983bd7506198a3fff\",\n    \"documentNumberUser\":\"1039886502\",\n    \"bookName\":\"El coronel no tiene quien le escriba\",\n    \"userName\":\"Walther Zapata\",\n    \"loanDate\":\"13/08/2025\",\n    \"loanTime\": 60\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/v1/biblioteca-digital/loans",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"biblioteca-digital",
+						"loans"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
